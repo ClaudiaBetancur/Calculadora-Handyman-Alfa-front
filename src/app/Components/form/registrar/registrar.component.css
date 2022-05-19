@@ -1,0 +1,36 @@
+body{
+
+  margin: 10px;
+}
+nav{
+  background-color: black;
+  border-radius: 5px;
+}
+h2{
+color: rgb(253, 253, 253);
+
+}
+.cabeceraform{
+
+  width: 550px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+h5{
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.form{
+  background-color: rgb(255, 255, 255);
+  width: 550px;
+  height: 500px;
+  border: 1px solid black;
+  border-radius: 5px;
+
+}
+form{
+  padding: 30px;
+}
+
+
