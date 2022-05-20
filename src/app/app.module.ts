@@ -9,6 +9,7 @@ import { RegistrarComponent } from './Components/form/registrar/registrar.compon
 import { CalcularComponent } from './Components/form/calcular/calcular.component';
 import { NavbarComponent } from './Components/form/navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 //Angular Material
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -31,7 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
-
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

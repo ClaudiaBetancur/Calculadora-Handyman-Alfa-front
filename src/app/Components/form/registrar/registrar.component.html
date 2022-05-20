@@ -23,12 +23,13 @@
             </div>
             <div class="mb-3">
               <label for="fechaI"  class="form-label">Fecha Inicio</label>
-              <input type="date" min="2022-05-10"   class="form-control"  formControlName="fechaI"  id="fechaI" required >
+              <input type="datetime-local" [min]="minDate" [max]="maxDate"  (change)="onChange()"  class="form-control"  formControlName="fechaI"  id="fechaI" required >
             </div>
             <div class="mb-3">
               <label for="fechaF" class="form-label">Fecha Fin</label>
-              <input type="date" max="2022-05-30"   class="form-control" id="fechaF" formControlName="fechaF"  required>
-            </div>
+              <input type="datetime-local"  [min]="form.value.fechaI" [max]="maxDate"   class="form-control" id="fechaF" formControlName="fechaF"  required>
+
+               </div>
 
             <button type="submit" class="btn btn-info" [disabled]="form.invalid" >Enviar</button>
           </form>
