@@ -7,8 +7,10 @@ nav{
   border-radius: 5px;
 }
 h2{
-color: rgb(253, 253, 253);
-
+color: rgb(0, 0, 0);
+padding: 2px;
+margin-top: 15px;
+text-align: center;
 }
 .cabeceraform{
 

@@ -9,4 +9,8 @@ export class AppComponent {
   myImage:string = "./assets/resources/HANDYMAN.png"
   title = 'Handyman';
   nombre : String = "HANDYMAN";
+  constructor(){
+
+  }
 }
+

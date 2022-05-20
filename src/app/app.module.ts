@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 //Angular Material
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegistrarService } from 'src/app/services/registrar.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RegistrarComponent,
     CalcularComponent,
     NavbarComponent
-
+    
 
   ],
   imports: [
@@ -34,7 +35,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [RegistrarService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

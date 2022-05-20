@@ -12,8 +12,9 @@ export class RegistrarService {
 
   constructor(private http: HttpClient) { }
 
+
   public getRegistro(data:any): Observable<any>{
-    return this.http.post(this.API_REGISTRAR,data);
+    return this.http.post<any>(this.API_REGISTRAR,data);
 
   }
 

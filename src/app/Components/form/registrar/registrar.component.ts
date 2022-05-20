@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import {MatSnackBar} from '@angular/material/snack-bar';
+
 import * as moment from 'moment';
 import { RegistrarService } from 'src/app/services/registrar.service';
 
@@ -42,6 +43,7 @@ export class RegistrarComponent implements OnInit {
   }
   enviar(): any{
 
+
     const idTecnico = this.form.value.idTecnico;
     const idServicio = this.form.value.idServicio;
     const fechaI = this.form.value.fechaI;
@@ -49,64 +51,35 @@ export class RegistrarComponent implements OnInit {
 
     const Datos={
       id:1,
-      technicalId: idTecnico,
+      document: idTecnico,
       requestId: idServicio,
       startDate: fechaI,
       endDate: fechaF
   }
+    console.log(Datos);
+
   this.service.getRegistro(Datos).subscribe(response =>{
-    console.log(response);
-    this.ok();
+    this.messageOk(response.message);
+  },({error})=> {
+    this.messageError(error.message)
+
   })
-
-    // hacer post con el back
-    if(idTecnico == '1' && idServicio == '1'){
-      //error id tecnico
-      this.ok();
-
-    } else if(idServicio == '0' && idTecnico == '0'){
-      this.error();
-    }
-    else if (idServicio == '0'){
-      //error id servicio
-      this.errorServicio();
-    } else if (idTecnico == '0'){
-      //Success
-      this.errorTecnico();
-    }
-
-  }
-  error(){
-    this._snackBar.open('Id Tecnico e Id Servicio Invalidos','',{
-      duration:5000,
-      horizontalPosition:'center',
-      verticalPosition:'top',
-    })
   }
 
-  errorTecnico(){
-    this. _snackBar.open('Id Tecnico Invalido','',{
-      duration:5000,
-      horizontalPosition:'center',
-      verticalPosition:'bottom',
-    });
-  }
-  errorServicio(){
-    this._snackBar.open('Id Servicio Invalido','',{
+  messageOk(mensaje:string){
+    this._snackBar.open(mensaje,'',{
       duration:5000,
       horizontalPosition:'center',
       verticalPosition:'bottom',
     })
   }
-  ok(){
-    this._snackBar.open('Registro Exitoso','',{
+  messageError(mensaje:string){
+    this._snackBar.open(mensaje,'',{
       duration:5000,
       horizontalPosition:'center',
       verticalPosition:'bottom',
     })
   }
 
-  onClick(){
-    alert('Id del tecnico')
-  }
+
 }
