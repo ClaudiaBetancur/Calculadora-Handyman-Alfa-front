@@ -35,4 +35,11 @@ form{
   padding: 30px;
 }
 
+.active__link{
+  color: #0DCAF0 !important;
+}
+
+.navbar_2{
+  border-radius: 0px;
+}
 

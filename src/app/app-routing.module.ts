@@ -7,17 +7,22 @@ import { CalcularComponent } from './Components/form/calcular/calcular.component
 
 const routes: Routes = [
 {
-  path:'', component:HomeComponent
+  path:'', 
+  pathMatch: "full",
+  redirectTo: "registrar/horas"
+},
+{
+  path:'registrar/usuario', component:HomeComponent
 },
 {
   path:'formulario', component:FormComponent
 }
 ,
 {
-  path:'registrar', component:RegistrarComponent
+  path:'registrar/horas', component:RegistrarComponent
 },
 {
-  path:'calcular', component:CalcularComponent
+  path:'calcular/horas_trabajadas', component:CalcularComponent
 }
 
 ];

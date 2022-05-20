@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegistrarService } from 'src/app/services/registrar.service';
+import { RegisterUserComponent } from './Components/register-user/register-user.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { RegistrarService } from 'src/app/services/registrar.service';
     HomeComponent,
     RegistrarComponent,
     CalcularComponent,
-    NavbarComponent
+    NavbarComponent,
+    RegisterUserComponent
     
 
   ],
