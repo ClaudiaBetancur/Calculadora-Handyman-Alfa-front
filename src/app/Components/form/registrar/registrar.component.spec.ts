@@ -38,7 +38,7 @@ describe('RegistrarComponent', () => {
   const fixture = TestBed.createComponent(RegistrarComponent);
   fixture.detectChanges();
   const compiled: HTMLElement = fixture.nativeElement;
-  expect(compiled.querySelector("h2")?.textContent).toEqual("Horas Y Servicios");
+  expect(compiled.querySelector("h2")?.textContent).toEqual("Registro de horas trabajadas");
   })
   it("debe renderizar Identificacion del Tecnico",()=>{
   const fixture = TestBed.createComponent(RegistrarComponent);
