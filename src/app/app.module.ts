@@ -17,6 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegistrarService } from 'src/app/services/registrar.service';
 import { RegisterUserComponent } from './Components/register-user/register-user.component';
 
+import { ToastService, AngularToastifyModule } from 'angular-toastify'; 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,9 +37,10 @@ import { RegisterUserComponent } from './Components/register-user/register-user.
     ReactiveFormsModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularToastifyModule
   ],
-  providers: [RegistrarService ],
+  providers: [RegistrarService, ToastService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
