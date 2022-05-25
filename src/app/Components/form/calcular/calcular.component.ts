@@ -75,7 +75,7 @@ export class CalcularComponent implements OnInit {
           this.alerts.messageOk(response.message);
           const { hoursWorked, person } = JSON.parse(response.body);
           this.resultCalculate = hoursWorked;
-          this.person = person ? person : null;
+          if(person) this.person = person;
           this.getTotalHours();
           this.showResult = true;
         },
