@@ -14,8 +14,11 @@ export class RegistrarService {
 
 
   public getRegistro(data:any): Observable<any>{
-    return this.http.post<any>(this.API_REGISTRAR,data);
+    return this.http.post<any>(this.API_REGISTRAR, data);
 
   }
 
+  public getCalculateHours(data:any): Observable<any>{
+    return this.http.post<any>(`${this.API_REGISTRAR}/hours`, data);
+  }
 }

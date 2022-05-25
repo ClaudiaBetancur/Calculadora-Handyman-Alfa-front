@@ -23,7 +23,7 @@ export class AlertsService {
     Toast.fire({
       icon: 'success',
       title: mensaje,
-      titleText: mensaje + " xd"
+      titleText: mensaje
     });
   }
 

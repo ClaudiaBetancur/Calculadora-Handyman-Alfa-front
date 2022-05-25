@@ -16,8 +16,12 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegistrarService } from 'src/app/services/registrar.service';
 import { RegisterUserComponent } from './Components/register-user/register-user.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
 
-import { ToastService, AngularToastifyModule } from 'angular-toastify'; 
+import { ToastService, AngularToastifyModule } from 'angular-toastify';
+import { ResultViewComponent } from './Components/form/calcular/result-view/result-view.component'; 
 
 @NgModule({
   declarations: [
@@ -27,7 +31,8 @@ import { ToastService, AngularToastifyModule } from 'angular-toastify';
     RegistrarComponent,
     CalcularComponent,
     NavbarComponent,
-    RegisterUserComponent
+    RegisterUserComponent,
+    ResultViewComponent
     
 
   ],
@@ -38,7 +43,10 @@ import { ToastService, AngularToastifyModule } from 'angular-toastify';
     MatSnackBarModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AngularToastifyModule
+    AngularToastifyModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule
   ],
   providers: [RegistrarService, ToastService ],
   bootstrap: [AppComponent]
