@@ -50,7 +50,7 @@ export class CalcularComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  //   this.minDate = moment().subtract(7, 'days').format('YYYY-MM-DDTHH:mm:ss');
+  //   this.minDate = moment().subtract(6, 'days').format('YYYY-MM-DDTHH:mm:ss');
   //   this.maxDate = moment().format('YYYY-MM-DDTHH:mm:ss');
   }
 

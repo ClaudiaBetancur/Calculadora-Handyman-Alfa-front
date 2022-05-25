@@ -42,7 +42,7 @@ export class RegistrarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.minDate = moment().subtract(7, 'days').format('YYYY-MM-DDThh:mm');
+    this.minDate = moment().subtract(6, 'days').format('YYYY-MM-DDThh:mm');
     this.maxDate = moment().format('YYYY-MM-DDThh:mm');
   }
 
